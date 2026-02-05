@@ -1,10 +1,12 @@
 package com.hyphentae.lms.model;
 
-public class Book {
+public abstract class Book {
     private long id;
     private String title;
     private String author;
     private boolean available;
+
+    public abstract BookType getType();
 
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
