@@ -5,6 +5,8 @@ import com.hyphentae.lms.model.Book;
 import com.hyphentae.lms.model.Loan;
 import com.hyphentae.lms.repository.*;
 import com.hyphentae.lms.service.*;
+import com.hyphentae.lms.report.LoanReport;
+
 
 import java.sql.SQLException;
 import java.util.List;
@@ -27,6 +29,7 @@ public class Main {
             System.out.println("2. Return book");
             System.out.println("3. View member loans");
             System.out.println("4. List available books");
+            System.out.println("5. Generate loan report");
             System.out.println("0. Exit");
             int choice = Integer.parseInt(sc.nextLine());
 
@@ -58,8 +61,16 @@ public class Main {
                     List<Book> books = loanService.listAvailableBooks();
                     for (Book b : books) {
                         System.out.println(b.getId() + " - " + b.getTitle() + " by " + b.getAuthor());
-                    }
-                } else if (choice == 0) {
+                }
+                } else if (choice == 5) {
+                    System.out.print("Member id: ");
+                    long m = Long.parseLong(sc.nextLine());
+                    LoanReport report = loanService.buildLoanReport(m);
+                    System.out.println("Report for member " + report.getMemberId() + " (" + report.getMemberName() + ")");
+                    System.out.println("Generated: " + report.getGeneratedAt());
+                    System.out.println("Active loans: " + report.getActiveLoans().size());
+                }
+                else if (choice == 0) {
                     break;
                 }
             } catch (BookAlreadyOnLoanException |

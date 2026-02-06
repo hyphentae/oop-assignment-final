@@ -3,6 +3,7 @@ package com.hyphentae.lms.service;
 import com.hyphentae.lms.exception.*;
 import com.hyphentae.lms.model.*;
 import com.hyphentae.lms.repository.*;
+import com.hyphentae.lms.report.LoanReport;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -37,7 +38,8 @@ public class LoanService {
         loan.setBookId(bookId);
         loan.setMemberId(memberId);
         loan.setLoanDate(LocalDate.now());
-        loan.setDueDate(LocalDate.now().plusDays(14));
+        int days = com.hyphentae.lms.config.LibraryConfig.getInstance().getLoanDays();
+        loan.setDueDate(LocalDate.now().plusDays(days));
         loanRepo.save(loan);
 
         book.setAvailable(false);
@@ -73,5 +75,18 @@ public class LoanService {
 
     public List<Book> listAvailableBooks() throws SQLException {
         return bookRepo.findAllAvailable();
+    }
+
+    public LoanReport buildLoanReport(long memberId) throws SQLException {
+        Member member = memberRepo.findById(memberId);
+        if (member == null) throw new MemberNotFoundException("Member not found");
+
+        List<Loan> loans = loanRepo.findActiveLoansByMember(memberId);
+
+        return LoanReport.builder()
+                .memberId(member.getId())
+                .memberName(member.getName())
+                .activeLoans(loans)
+                .build();
     }
 }

@@ -1,9 +1,9 @@
 package com.hyphentae.lms.service;
 
-public class FineCalculator {
-    private final double perDay = 100.0;
+import com.hyphentae.lms.config.LibraryConfig;
 
+public class FineCalculator {
     public double calculate(long daysOverdue) {
-        return daysOverdue * perDay;
+        return daysOverdue * LibraryConfig.getInstance().getFinePerDay();
     }
 }
