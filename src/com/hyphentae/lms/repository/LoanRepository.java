@@ -1,7 +1,7 @@
 package com.hyphentae.lms.repository;
 
-import com.hyphentae.lms.db.DatabaseConnection;
-import com.hyphentae.lms.model.Loan;
+import com.hyphentae.lms.shared.DatabaseConnection;
+import com.hyphentae.lms.loan.Loan;
 
 import java.sql.*;
 import java.time.LocalDate;

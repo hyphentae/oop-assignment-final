@@ -1,4 +1,4 @@
-package com.hyphentae.lms.db;
+package com.hyphentae.lms.shared;
 
 import java.io.IOException;
 import java.nio.file.Files;

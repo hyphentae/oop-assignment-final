@@ -1,7 +1,6 @@
-package com.hyphentae.lms.repository;
+package com.hyphentae.lms.member;
 
-import com.hyphentae.lms.db.DatabaseConnection;
-import com.hyphentae.lms.model.Member;
+import com.hyphentae.lms.shared.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

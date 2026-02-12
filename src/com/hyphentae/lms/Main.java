@@ -1,11 +1,15 @@
 package com.hyphentae.lms;
 
+import com.hyphentae.lms.catalog.BookRepository;
 import com.hyphentae.lms.exception.*;
+import com.hyphentae.lms.loan.LoanService;
+import com.hyphentae.lms.member.MemberNotFoundException;
+import com.hyphentae.lms.member.MemberRepository;
 import com.hyphentae.lms.model.Book;
-import com.hyphentae.lms.model.Loan;
+import com.hyphentae.lms.loan.Loan;
 import com.hyphentae.lms.repository.*;
 import com.hyphentae.lms.service.*;
-import com.hyphentae.lms.report.LoanReport;
+import com.hyphentae.lms.reporting.LoanReport;
 
 
 import java.sql.SQLException;

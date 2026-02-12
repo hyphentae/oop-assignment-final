@@ -1,4 +1,4 @@
-package com.hyphentae.lms.model;
+package com.hyphentae.lms.loan;
 
 import java.time.LocalDate;
 

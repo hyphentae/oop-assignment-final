@@ -1,6 +1,6 @@
 package com.hyphentae.lms.service;
 
-import com.hyphentae.lms.config.LibraryConfig;
+import com.hyphentae.lms.shared.LibraryConfig;
 
 public class FineCalculator {
     public double calculate(long daysOverdue) {

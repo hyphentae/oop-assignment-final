@@ -1,4 +1,4 @@
-package com.hyphentae.lms.repository;
+package com.hyphentae.lms.shared;
 
 import java.sql.SQLException;
 import java.util.List;

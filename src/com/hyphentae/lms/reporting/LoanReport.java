@@ -1,6 +1,6 @@
-package com.hyphentae.lms.report;
+package com.hyphentae.lms.reporting;
 
-import com.hyphentae.lms.model.Loan;
+import com.hyphentae.lms.loan.Loan;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -25,6 +25,7 @@ public class LoanReport {
     public LocalDateTime getGeneratedAt() { return generatedAt; }
     public List<Loan> getActiveLoans() { return activeLoans; }
 
+    //builder
     public static Builder builder() { return new Builder(); }
 
     public static class Builder {

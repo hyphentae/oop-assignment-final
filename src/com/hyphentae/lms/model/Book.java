@@ -1,5 +1,7 @@
 package com.hyphentae.lms.model;
 
+import com.hyphentae.lms.catalog.BookType;
+
 public abstract class Book {
     private long id;
     private String title;

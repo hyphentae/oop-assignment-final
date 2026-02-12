@@ -1,4 +1,4 @@
-package com.hyphentae.lms.model;
+package com.hyphentae.lms.catalog;
 
 public enum BookType {
     PRINTED,

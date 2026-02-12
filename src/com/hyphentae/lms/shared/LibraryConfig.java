@@ -1,4 +1,4 @@
-package com.hyphentae.lms.config;
+package com.hyphentae.lms.shared;
 
 public class LibraryConfig {
 

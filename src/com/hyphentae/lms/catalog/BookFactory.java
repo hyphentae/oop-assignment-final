@@ -1,4 +1,4 @@
-package com.hyphentae.lms.factory;
+package com.hyphentae.lms.catalog;
 
 import com.hyphentae.lms.model.*;
 
