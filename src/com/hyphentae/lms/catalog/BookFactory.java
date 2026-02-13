@@ -1,4 +1,4 @@
-package com.hyphentae.lms.factory;
+package com.hyphentae.lms.catalog;
 
 import com.hyphentae.lms.model.*;
 
@@ -14,6 +14,7 @@ public class BookFactory {
         return b;
     }
 
+    //lambda
     public static Book createEmpty(BookType type) {
         return switch (type) {
             case PRINTED -> new PrintedBook();

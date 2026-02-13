@@ -1,5 +1,6 @@
-package com.hyphentae.lms.config;
+package com.hyphentae.lms.shared;
 
+//signleton
 public class LibraryConfig {
 
     private final int loanDays;

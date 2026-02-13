@@ -1,4 +1,4 @@
-package com.hyphentae.lms.exception;
+package com.hyphentae.lms.loan;
 
 public class LoanOverdueException extends RuntimeException {
     public LoanOverdueException(String message) {

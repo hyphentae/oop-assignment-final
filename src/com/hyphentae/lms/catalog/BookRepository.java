@@ -1,9 +1,8 @@
-package com.hyphentae.lms.repository;
+package com.hyphentae.lms.catalog;
 
-import com.hyphentae.lms.db.DatabaseConnection;
-import com.hyphentae.lms.factory.BookFactory;
 import com.hyphentae.lms.model.Book;
-import com.hyphentae.lms.model.BookType;
+import com.hyphentae.lms.shared.CrudRepository;
+import com.hyphentae.lms.shared.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;

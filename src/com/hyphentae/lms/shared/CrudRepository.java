@@ -1,8 +1,9 @@
-package com.hyphentae.lms.repository;
+package com.hyphentae.lms.shared;
 
 import java.sql.SQLException;
 import java.util.List;
 
+//generics
 public interface CrudRepository<T, ID> {
     T findById(ID id) throws SQLException;
     List<T> findAll() throws SQLException;
